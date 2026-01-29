@@ -1,0 +1,61 @@
+<nz-card nzTitle="Dashboard Admin" class="dashboard-card">
+  <nz-row [nzGutter]="16">
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Total Users</h3>
+        <p class="stat-number">{{ totalUsers }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Pengguna</h3>
+        <p class="stat-number">{{ penggunaCount }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Pegawai</h3>
+        <p class="stat-number">{{ pegawaiCount }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Admin</h3>
+        <p class="stat-number">{{ adminCount }}</p>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+
+  <nz-row [nzGutter]="16" style="margin-top: 16px">
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Total Permohonan</h3>
+        <p class="stat-number">{{ totalRequests }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Pending</h3>
+        <p class="stat-number">{{ pending }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Approved</h3>
+        <p class="stat-number">{{ approved }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Rejected</h3>
+        <p class="stat-number">{{ rejected }}</p>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</nz-card>
