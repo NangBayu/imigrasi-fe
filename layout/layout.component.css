@@ -1,0 +1,104 @@
+/* Layout Utama */
+.layout {
+  min-height: 100vh;
+}
+
+/* Sidebar tetap */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 240px; /* PAKSA width tetap */
+  min-width: 240px; /* mencegah mengecil */
+  max-width: 240px; /* mencegah melebar */
+  height: 100vh;
+  z-index: 1000;
+  overflow: auto; /* scroll jika menu terlalu panjang */
+}
+
+/* SIDEBAR */
+nz-sider {
+  background: #002766 !important;
+}
+
+.logo {
+  height: 64px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* MENU */
+.ant-menu-dark {
+  background: #002766;
+  height: calc(100vh - 64px); /* 64px = tinggi logo */
+  overflow-y: auto;
+}
+
+.ant-menu-dark .ant-menu-item {
+  margin: 4px 8px;
+  border-radius: 6px;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background: #0050b3 !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Main layout geser sesuai sidebar */
+.main-layout {
+  margin-left: 240px; /* sama dengan width sidebar */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header tetap di atas */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.header-left {
+  font-size: 18px;
+  font-weight: 600;
+  color: #002766;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #002766;
+}
+
+/* Content scrollable */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #f5f7fa;
+}
+
+/* JUDUL HALAMAN (OPSIONAL) */
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #002766;
+  margin-bottom: 16px;
+}

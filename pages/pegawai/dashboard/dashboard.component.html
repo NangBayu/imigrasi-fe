@@ -1,0 +1,31 @@
+<nz-card nzTitle="Dashboard Pegawai" class="dashboard-card">
+  <nz-row [nzGutter]="16">
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Total Permohonan</h3>
+        <p class="stat-number">{{ totalRequests }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Pending</h3>
+        <p class="stat-number">{{ pending }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Approved</h3>
+        <p class="stat-number">{{ approved }}</p>
+      </nz-card>
+    </nz-col>
+
+    <nz-col nzSpan="6">
+      <nz-card>
+        <h3>Rejected</h3>
+        <p class="stat-number">{{ rejected }}</p>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</nz-card>

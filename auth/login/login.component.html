@@ -1,0 +1,37 @@
+<div class="auth-wrapper">
+  <nz-card class="auth-card">
+    <div class="auth-header">
+      <span nz-icon nzType="safety"></span>
+      <h2>Sistem Imigrasi</h2>
+      <p>Silakan login untuk melanjutkan</p>
+    </div>
+
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input placeholder="Username" [(ngModel)]="username" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="lock">
+          <input
+            nz-input
+            type="password"
+            placeholder="Password"
+            [(ngModel)]="password"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <button nz-button nzType="primary" nzBlock (click)="login()">Login</button>
+
+    <div class="auth-footer">
+      Belum punya akun?
+      <a routerLink="/register">Daftar</a>
+    </div>
+  </nz-card>
+</div>

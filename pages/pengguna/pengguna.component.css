@@ -1,0 +1,14 @@
+.permohonan-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: none;
+  min-height: 400px;
+}
+
+.permohonan-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.permohonan-card nz-form-item {
+  margin-bottom: 16px;
+}

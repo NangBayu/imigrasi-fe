@@ -1,0 +1,36 @@
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #002766, #0050b3);
+}
+
+.auth-card {
+  width: 380px;
+  border-radius: 8px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-header span {
+  font-size: 32px;
+  color: #0050b3;
+}
+
+.auth-header h2 {
+  margin: 8px 0 0;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 13px;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 16px;
+}

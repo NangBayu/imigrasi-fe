@@ -1,0 +1,88 @@
+<nz-layout class="layout">
+  <!-- SIDEBAR -->
+  <nz-sider nzTheme="dark" nzCollapsible [nzWidth]="240" class="sidebar">
+    <div class="logo">
+      <span nz-icon nzType="bank"></span>
+      Imigrasi
+    </div>
+
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <!-- PENGGUNA -->
+      <li
+        routerLinkActive="ant-menu-item-selected"
+        nz-menu-item
+        *ngIf="user.role === 'pengguna'"
+        routerLink="/permohonan"
+      >
+        <span nz-icon nzType="file-add"></span>
+        <span>Permohonan</span>
+      </li>
+
+      <li
+        routerLinkActive="ant-menu-item-selected"
+        nz-menu-item
+        *ngIf="user.role === 'pengguna'"
+        routerLink="/riwayat"
+      >
+        <span nz-icon nzType="history"></span>
+        <span>Riwayat</span>
+      </li>
+
+      <!-- PEGAWAI -->
+      <li
+        routerLinkActive="ant-menu-item-selected"
+        nz-menu-item
+        *ngIf="user.role === 'pegawai'"
+        routerLink="/dashboard"
+      >
+        <span nz-icon nzType="dashboard"></span>
+        <span>Dashboard</span>
+      </li>
+
+      <li
+        routerLinkActive="ant-menu-item-selected"
+        nz-menu-item
+        *ngIf="user.role === 'pegawai'"
+        routerLink="/approval"
+      >
+        <span nz-icon nzType="check-square"></span>
+        <span>Approval</span>
+      </li>
+
+      <!-- ADMIN -->
+      <li
+        routerLinkActive="ant-menu-item-selected"
+        nz-menu-item
+        *ngIf="user.role === 'admin'"
+        routerLink="/kelola-akun"
+      >
+        <span nz-icon nzType="user"></span>
+        <span>Kelola Akun</span>
+      </li>
+    </ul>
+  </nz-sider>
+
+  <!-- MAIN -->
+  <nz-layout class="main-layout">
+    <!-- HEADER -->
+    <nz-header class="header">
+      <div class="header-left">Sistem Informasi Keimigrasian</div>
+
+      <div class="header-right">
+        <span style="margin-right: -10px" nz-icon nzType="user"></span>
+        {{ user.username }}
+        <button nz-button nzType="link" nzDanger (click)="logout()">
+          <span nz-icon nzType="logout"></span>
+          Logout
+        </button>
+      </div>
+    </nz-header>
+
+    <!-- CONTENT -->
+    <nz-content class="content">
+      <router-outlet></router-outlet>
+      <!-- <nz-card class="content-card">
+      </nz-card> -->
+    </nz-content>
+  </nz-layout>
+</nz-layout>
